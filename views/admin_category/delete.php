@@ -1,11 +1,5 @@
-<?php include ROOT . '/views/layouts/header_admin.php'; ?>
-
-<section>
-    <div class="container">
-        <div class="row">
-
-            <br/>
-
+<?php include ROOT . '/views/layouts/header.php'; ?>
+<main class="content"><!-- MAIN ============= -->
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
@@ -23,10 +17,7 @@
             <form method="post">
                 <input type="submit" name="submit" value="Удалить" />
             </form>
-
-        </div>
-    </div>
-</section>
+</main>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
 

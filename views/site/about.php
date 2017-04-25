@@ -1,8 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 <section>
-    <div class="container">
-        <div class="row">
 
             <div class="col-lg-6">
                 <h4>Информация о сайте</h4>
@@ -26,8 +24,6 @@
                     suscipit finibus at, eleifend eget urna. Mauris laoreet metus 
                     a nisl bibendum, nec maximus urna molestie.</p>
             </div>
-        </div>
-    </div>
 </section>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

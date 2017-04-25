@@ -22,12 +22,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/common.js"></script>
-    <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-    <!-- Google Analytics counter --><!-- /Google Analytics counter -->
-    <script src="js/custom.js"></script>
-<script src="/template/js/main.js"></script>
+<script src="/template/js/my.js"></script>
 <script>
     $(document).ready(function(){
         $(".add-to-cart").click(function () {
@@ -39,6 +34,5 @@
         });
     });
 </script>
-
   </body>
   </html>

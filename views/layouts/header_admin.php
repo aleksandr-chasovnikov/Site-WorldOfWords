@@ -21,36 +21,26 @@
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	<link rel="shortcut icon" href="/template/images/ico/" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/"/>
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/"/>
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/"/>
-	<link rel="apple-touch-icon-precomposed" href="/template/images/ico/"/>
-</head>
+		<![endif]-->
+		<link rel="shortcut icon" href="/template/images/ico/" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/"/>
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/"/>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/"/>
+		<link rel="apple-touch-icon-precomposed" href="/template/images/ico/"/>
+	</head>
 
-<body>
-	<div class="page-wrapper">
+	<body>
+		<div class="page-wrapper">
 
-		<header id="header">
-			<div class="header_top">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="contactinfo">
-								<h5>
-									<a href="/admin"><i class="fa fa-edit"></i> Админпанель</a>
-								</h5>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="social-icons pull-right">
-								<ul class="nav nav-bar">
-									<li><a href="/"><i class="fa fa-sign-out">На сайт</i></a></li>
-								</ul>
-							</div>
-						</div>
+			<header id="header">
+				<div class="header_top">
+					<h5>
+						<a href="/admin"><i class="fa fa-edit"></i> Админпанель</a>
+					</h5>
+					<div class="social-icons pull-right">
+						<ul class="nav nav-bar">
+							<li><a href="/"><i class="fa fa-sign-out">На сайт</i></a></li>
+						</ul>
 					</div>
-				</div>
-			</div>			
-		</header>
+				</div>		
+			</header>

@@ -66,7 +66,7 @@ class CabinetController
         }
 
         // Подключаем вид
-        require_once(ROOT . '/views/cabinet/cart.php');
+        require_once(ROOT . '/views/cabinet/edit.php');
         return true;
     }
 

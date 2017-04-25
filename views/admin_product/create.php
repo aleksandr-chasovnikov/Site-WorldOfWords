@@ -1,16 +1,12 @@
-<?php include ROOT . '/views/layouts/header_admin.php'; ?>
+<?php include ROOT . '/views/layouts/header.php'; ?>
 
-<section>
-	<div class="container">
-		<div class="row">
-
-			<div class="breadcrumb">
+<main class="content"><!-- MAIN ============= -->
 				<ol class="breadcrumb">
 					<li><a href="/admin">Админпанель</a></li>
 					<li><a href="/admin/product">Управление записями</a></li>
 					<li class="active">Редактировать запись</li>
 				</ol>
-			</div>
+			
 			<h4>Добавить новую запись</h4>
 			<br/>
 
@@ -22,8 +18,6 @@
 				</ul>
 			<?php endif; ?>
 
-			<div class="col-lg-4">
-				<div class="login-form">
 					<form action="#" method="post" enctype="multypart/form-date">
 
 						<p>Слово</p>
@@ -66,10 +60,6 @@
 						<br><br>
 
 					</form>
-				</div>
-			</div>
-		</div>
-		</div>	
-</section>
+				</main>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

@@ -14,11 +14,6 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-<link rel="shortcut icon" href="/template/images/ico/" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/"/>
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/"/>
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/"/>
-<link rel="apple-touch-icon-precomposed" href="/template/images/ico/"/>
 </head>
 <body>
     <div class="wrapper">

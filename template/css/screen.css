@@ -195,6 +195,10 @@ h3 {
   line-height: 35px;
 }
 
+li {
+  margin-top: 10px;
+}
+
 /* ICONS ================== */
 /* ICONS END ================== */
 /* GRID ======================== */
@@ -460,6 +464,22 @@ input[type="submit"].btn, button.btn, input.btn[type="button"], input.btn[type="
   transform: translate(-50%, 0);
 }
 
+.table-word {
+  margin: 0 auto;
+}
+.table-word td {
+  vertical-align: middle;
+  border: 1px solid #000;
+  padding: 0 10px;
+}
+.table-word tr {
+  height: 40px;
+  padding: 0 10px;
+}
+.table-word tr:nth-child(even) {
+  background: #FFEBCF;
+}
+
 .section:not(.home) {
   padding-top: 55px !important;
 }
@@ -473,7 +493,7 @@ input[type="submit"].btn, button.btn, input.btn[type="button"], input.btn[type="
   bottom: 0;
   width: 100%;
   padding: 15px 25px;
-  background: #FEE7BE;
+  background: #FFEBCF;
 }
 .footer__logo {
   margin: 0 auto;

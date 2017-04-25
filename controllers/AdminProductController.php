@@ -39,9 +39,7 @@ class AdminProductController extends AdminBase
             // Если форма отправлена
             // Получаем данные из формы
             $options['name'] = $_POST['name'];
-            $options['image'] = $_POST['image'];
             $options['category_id'] = $_POST['category_id'];
-            $options['description'] = $_POST['description'];
             $options['content'] = $_POST['content'];
             $options['status'] = $_POST['status'];
 
@@ -96,23 +94,9 @@ class AdminProductController extends AdminBase
             // Если форма отправлена
             // Получаем данные из формы редактирования. При необходимости можно валидировать значения
             $options['name'] = $_POST['name'];
-            $options['image'] = $_POST['image'];
             $options['category_id'] = $_POST['category_id'];
-            $options['description'] = $_POST['description'];
             $options['content'] = $_POST['content'];
             $options['status'] = $_POST['status'];
-
-            // Сохраняем изменения
-            if (Product::updateProductById($id, $options)) {
-
-                // Если запись сохранена
-                // Проверим, загружалось ли через форму изображение
-                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-
-                    // Если загружалось, переместим его в нужную папке, дадим новое имя
-                   move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
-                }
-            }
 
             // Перенаправляем пользователя на страницу управлениями статьями
             header("Location: /admin/product");

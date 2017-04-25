@@ -1,10 +1,6 @@
-<?php include ROOT . '/views/layouts/header_admin.php'; ?>
+<?php include ROOT . '/views/layouts/header.php'; ?>
 
-<section>
-    <div class="container">
-        <div class="row">
-
-            <br/>
+<main class="content"><!-- MAIN ============= -->
 
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
@@ -19,8 +15,6 @@
 
             <br/>
 
-            <div class="col-lg-4">
-                <div class="login-form">
                     <form action="#" method="post">
 
                         <p>Название</p>
@@ -39,11 +33,8 @@
                         
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+ </main>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
 

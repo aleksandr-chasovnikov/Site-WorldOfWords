@@ -8,7 +8,7 @@ class CatalogController
 {
 
     /**
-     * Action для страницы "Каталог статей"
+     * Action для страницы "словарь"
      */
     public function actionIndex()
     {
@@ -41,7 +41,7 @@ class CatalogController
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
 
         // Подключаем вид
-        require_once(ROOT . '/views/site/index.php');
+        require_once(ROOT . '/views/site/category.php');
         return true;
     }
 

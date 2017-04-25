@@ -1,18 +1,13 @@
-<?php include ROOT . '/views/layouts/header_admin.php'; ?>
+<?php include ROOT . '/views/layouts/header.php'; ?>
 
-<section>
-    <div class="container">
-        <div class="row">
+<main class="content"><!-- MAIN ============= -->
 
-            <br/>
 
-            <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление словарями</a></li>
+                    <li><a href="/admin/category">Управление словарями</a></li>
                     <li class="active">Добавить словарь</li>
                 </ol>
-            </div>
 
 
             <h4>Добавить новый словарь</h4>
@@ -27,9 +22,7 @@
                 </ul>
             <?php endif; ?>
 
-            <div class="col-lg-4">
-                <div class="login-form">
-                    <form action="#" method="post">
+                    <form action="#" method="post" class="form">
 
                         <p>Название</p>
                         <input type="text" name="name" placeholder="" value="" required>
@@ -47,13 +40,10 @@
 
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                     </form>
-                </div>
-            </div>
-
 
         </div>
     </div>
-</section>
+</main>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
 
