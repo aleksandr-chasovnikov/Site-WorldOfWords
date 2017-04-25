@@ -4,14 +4,14 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="breadcrumbs">
+			<div class="breadcrumb">
 				<ol class="breadcrumb">
 					<li><a href="/admin">Админпанель</a></li>
-					<li><a href="/admin/product">Управление статьями</a></li>
-					<li class="active">Редактировать статью</li>
+					<li><a href="/admin/product">Управление записями</a></li>
+					<li class="active">Редактировать запись</li>
 				</ol>
 			</div>
-			<h4>Добавить новую статью</h4>
+			<h4>Добавить новую запись</h4>
 			<br/>
 
 			<?php if (isset($errors) && is_array($errors)): ?>
@@ -26,10 +26,10 @@
 				<div class="login-form">
 					<form action="#" method="post" enctype="multypart/form-date">
 
-						<p>Название</p>
+						<p>Слово</p>
 						<input type="text" name="name" placeholder="" value="" required>			
 
-						<p>Категория</p>
+						<p>Словари</p>
 						<select name="category_id">
 
 							<?php if (is_array($categoriesList)): ?>
@@ -48,16 +48,7 @@
 
 						<br><br>
 
-
-						<p>Изображение</p>
-						<input type="file" name="image" placeholder="" value="">
-
 						<p>Описание</p>
-						<textarea name="description" required></textarea>
-
-						<br><br>
-
-						<p>Текст</p>
 						<textarea name="content" required></textarea>
 
 						<br><br>

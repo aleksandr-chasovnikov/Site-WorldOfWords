@@ -54,7 +54,7 @@ class AdminCategoryController extends AdminBase
                 Category::createCategory($name, $sortOrder, $status);
 
                 // Перенаправляем пользователя на страницу управлениями категориями
-                header("Location: /admin/category");
+                header("Location: /admin/category/index.php");
             }
         }
 

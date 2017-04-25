@@ -1,11 +1,11 @@
 
 //Видимость блоков (тест):
-$border-test: 1px solid #000; 
+$border-test: 1px solid transparent; 
 
 $color_bg: #eee;
-$color_text: #fff;
+$color_text: #333;
 $color_input_text: #333;
-$color_input_bg: #999;
+$color_input_bg: #FFEBCF;
 $color_placeholder: #777;
 
 $color_btn_bg: transparent;
@@ -14,7 +14,7 @@ $color_btn_txt: #777;
 $text_shadow: 0;
 $box_shadow: 0;
 
-$color_link: #999;
+$color_link: #FE8F00;
 $color_visit: #C62EB2;
 $color_hover: #414041;
 $color_active: #c62f21;
@@ -23,6 +23,7 @@ $color_link_bg: transparent;
 $font_name: Helvetica;
 $font_size: 18px;
 $font-weight: 400;
+
 
 @include font('#{$font_name}', '#{$font_name}Bold') {
     font-style: normal;
@@ -58,7 +59,6 @@ a {
 
 body {
     font-family: '#{$font_name}', Arial, Tahoma, sans-serif;
-    @include bg;
     position: relative;
     font-size: $font_size ;
     font-weight: $font-weight;
@@ -103,18 +103,18 @@ h3 {
 
 
 /* ICONS ================== */
-.ic  {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    background: $icons no-repeat;
-}
+//.ic  {
+//    position: relative;
+//    display: inline-block;
+//    vertical-align: middle;
+//    background: $icons no-repeat;
+//}
 
- @each $i in rss, twitter {
-     .ic--#{$i} {
-         @include s(#{$i});
-     }
- }
+// @each $i in rss, twitter {
+//     .ic--#{$i} {
+//         @include s(#{$i});
+//     }
+// }
 /* ICONS END ================== */
 
 /* GRID ======================== */
@@ -143,7 +143,8 @@ $columns: 12;
 .wrapper {
     position: relative;
     max-width: 1280px;
-    min-width: 320px;
+    min-width: 240px;
+    min-height: 100%;
     padding: 0 15px;
     margin-right: auto;
     margin-left: auto;
@@ -174,27 +175,12 @@ input {
     }
 }
 
-.btn, a.btn {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    padding: 10px 20px 0;
-    height: 40px;
-    color: $color_btn_txt;
-    font: normal 16px/16px  "#{$font_name}", Arial, sans-serif;
-    @include tr(all 0.3s linear);
-    background-color: $color_btn_bg;
-    border: none;
-}
-
-input[type="submit"].btn, button.btn {
-    padding-top: 0;
-}
 /* BUTTON END ================== */
 
 /* FORM ================== */
 input, textarea {
     color: $color_input_text;
+    display: block;
     outline: none;
     @include br(0);
     -webkit-appearance: none;
@@ -205,12 +191,12 @@ input[type="tel"], input[type="email"],
 textarea {
     height: 40px;
     padding: 0 15px;
-    font: normal 14px/14px Arial, sans-serif;
-    color: $color_text;
+    width: 250px;
+    margin-top: 5px;
+    font: normal 20px Arial, sans-serif;
     background: $color_input_bg;
     border: 1px solid #ccc;
     &.form-control {
-            display: block;
             width: 100%;
     }
 }
@@ -224,6 +210,27 @@ textarea {
 
 label {
     display: block;
+}
+
+.btn, a.btn {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 20px 0;
+    height: 40px;
+    color: $color_btn_txt;
+    font: normal 16px/16px  "#{$font_name}", Arial, sans-serif;
+    @include tr(all 0.3s linear);
+    background-color: $color_btn_bg;
+}
+
+input[type="submit"].btn, button.btn {
+    padding-top: 0;
+    @include br(2px);
+    border: 1px solid #342B2B;
+    width: 250px;
+    margin-top: 20px;
+    @include gradv(#FFFFFF, #F89F05);
 }
 /* FORM END ================== */
 
@@ -248,6 +255,7 @@ label {
         height: 50px;
         line-height: 50px;
         border: $border-test;
+        padding-left: 15px;
     }
 }
 
@@ -282,9 +290,10 @@ label {
         border: $border-test;
     }
 	&__link {
-		display: inline-block;
-		color: #000;
-		font-size: 14px;
+		font-size: 22px;
+        @include media(500) {
+            font-size: 16px;
+        }
 		&-more {
 			padding: 5px 10px;
 			margin-right: 10px;
@@ -294,181 +303,13 @@ label {
     }
 }
 
+.logo a img {
+    &:hover {
+       @include tr;
+       @include rot(360);
+    }
 
-// .header 
-//     position: absolute
-//     left: 0
-//     top: 0
-//     width: 100%
-//     &__top
-//         // padding: 35px 0 20px
-//         // @include df 
-//         // @include jc
-//     &__bottom
-//         border-bottom: 1px solid #dedede
-
-// .circle
-//     display: inline-block
-//     vertical-align: top
-//     color: #262729
-//     font-size: 12px
-//     font-weight: 600
-//     line-height: 17px
-//     & @include  .circle
-//         margin-left: 8px
-//     &:before 
-//         content: ''
-//         display: inline-block
-//         vertical-align: middle
-//         width: 8px
-//         height: 8px
-//         margin-right: 2px
-//         background-color: #2d71cf
-//         @include border-radius(50%)
-//     &:nth-child(2):before
-//         background-color: #7218b2
-
-// .list-lang 
-//     list-style: none
-//     &__item 
-//         display: inline-block
-//         vertical-align: top
-//         & @include  .list-lang__item 
-//             margin-left: 10px
-//     &__link 
-//         display: block
-//         text-align: center
-        
-// .file   
-//     display: block
-//     width: 170px
-//     height: 41px
-//     padding: 5px 11px
-//     background-color: #ffffff
-//     @include box-shadow(0 0 10px rgba(0, 0, 0, 0.08))
-//     @include border-radius(3px)
-//     border: 1px solid #eee
-//     &__type 
-//         position: relative
-//         z-index: 1
-//         display: inline-block
-//         vertical-align: middle
-//         margin-right: -4px
-//         width: 60px
-//         color: $color_text
-//         font-size: 32px
-//         line-height: 32px
-//         font-weight: 900
-//         text-transform: uppercase
-//     &__name 
-//         display: inline-block
-//         vertical-align: middle
-//         margin-right: -4px
-//         width: 100%
-//         margin-left: -60px
-//         padding-left: 70px
-//         color: rgba(38,39,41,0.57)
-//         font-size: 11px
-//         font-weight: 400
-//         line-height: 14px
-//         text-transform: uppercase
-
-// .navbar     
-//     padding: 13px 0
-//     &.fixed 
-//         position: fixed
-//         left: 0
-//         width: 100%
-//         top: 0
-//         @include tr(all 0.5s linear)
-//     &-menu 
-//         list-style: none
-//         // @include df
-//         // @include jc
-//         &__item
-//             display: inline-block
-//             position: relative
-//             min-height: 28px
-//             &--advice
-//                 padding-left: 50px
-//                 background: url("../img/speech.png") no-repeat left center
-//                 .navbar-menu__link 
-//                     color: #f2ed9f
-//                     &:hover 
-//                         color: #fff
-//             &:before 
-//                 content: ''
-//                 position: absolute
-//                 left: 0
-//                 margin-left: -21px
-//                 width: 1px
-//                 height: 28px
-//                 background: rgba(255,255,255,0.15)
-//             &:first-child, &--advice
-//                 &:before 
-//                     display: none
-//         &__link 
-//             color: #ffffff
-//             font-size: 25px
-//             font-weight: 700
-//             line-height: 28px
-//             &:hover 
-//                 color: #f2ed9f
-
-// .panel 
-//     padding: 15px 0
-//     // @include df 
-//     // @include jc
-//     -webkit-flex-wrap: wrap
-//     flex-wrap: wrap
-//     &__text 
-//         color: #262729
-//         font-size: 18px
-//         font-weight: 700
-//         line-height: 34px
-//     &__link 
-//         display: inline-block
-//         line-height: 25px
-//         border-bottom: 2px solid #017f5a
-//         &:hover 
-//             border-bottom-color: transparent
-
-// .social 
-//     // @include df
-//     &-list 
-//         list-style: none
-//         // @include df
-//         &__link 
-//             // @include df 
-//             // @include align-items
-//             width: 33px
-//             height: 33px
-//             margin: 0 1px
-//             background-color: transparent
-//             border: 2px solid transparent
-//             @include border-radius(50%)
-//             span 
-//                 display: block
-//                 width: 25px
-//                 height: 25px
-//                 background: #8d8d8d
-//                 @include border-radius(50%)
-//                 color: #fff
-//                 font-size: 18px
-//                 font-weight: 700
-//                 line-height: 25px
-//                 text-align: center
-//             &:hover 
-//                 border-color: #2b47c2
-//                 background-color: #FFF
-//                 span 
-//                     background-color: #2b47c2
-//     &__title 
-//         color: #616264
-//         font-size: 18px
-//         font-weight: 700
-//         line-height: 34px
-//         margin-right: 8px
+}
 
 
 /* HEADER END ================== */
@@ -476,7 +317,12 @@ label {
 /* CONTENT ================== */
 .content {
     border: $border-test;
+    text-align: center;
     width: 100%;
+}
+
+.form {
+    @include centerer(true, false);
 }
  
 // Центрирование при прокрутке секций страницы:   
@@ -486,17 +332,14 @@ label {
 /* CONTENT END ================== */
 
 /* 6. FOOTER ================== */
-footer {
-    border: $border-test;
-//    position: absolute;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-}
 .footer {
     border: $border-test;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     padding: 15px 25px;
-    background: #eee;
+    background: #FEE7BE;
     &__logo {
         margin: 0 auto;
     }

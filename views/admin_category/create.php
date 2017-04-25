@@ -9,13 +9,13 @@
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление категориями</a></li>
-                    <li class="active">Добавить категорию</li>
+                    <li><a href="/admin/order">Управление словарями</a></li>
+                    <li class="active">Добавить словарь</li>
                 </ol>
             </div>
 
 
-            <h4>Добавить новую категорию</h4>
+            <h4>Добавить новый словарь</h4>
 
             <br/>
 
@@ -35,7 +35,7 @@
                         <input type="text" name="name" placeholder="" value="" required>
 
                         <p>Порядковый номер</p>
-                        <input type="text" name="sort_order" placeholder="0" value="0" required>
+                        <input type="text" name="sort_order" placeholder="0" value="0">
 
                         <p>Статус</p>
                         <select name="status">

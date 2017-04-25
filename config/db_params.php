@@ -2,7 +2,7 @@
 
 return array(
 	'host' => 'Site-WorldOfWords',
-	'dbname' => 'chasblog2',
+	'dbname' => 'wow',
 	'user' => 'root',
 	'password' => '',
 );

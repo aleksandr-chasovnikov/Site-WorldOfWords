@@ -30,7 +30,7 @@ return array(
     'admin/category/delete/([0-9]+)' => 'adminCategory/delete/$1',
     'admin/category' => 'adminCategory/index', 
     // Админпанель:
-    'admin' => 'admin/index',
+    'admin' => 'adminProduct/index',
     // О сайте
     'contacts' => 'site/contact',
     'about' => 'site/about',

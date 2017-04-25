@@ -5,14 +5,14 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="breadcrumbs">
+			<div class="breadcrumb">
 				<ol class="breadcrumb">
 					<li><a href="/admin">Админпанель</a></li>
-					<li><a href="/admin/product">Управление статьями</a></li>
-					<li class="active">Редактировать статью</li>
+					<li><a href="/admin/product">Управление записями</a></li>
+					<li class="active">Редактировать запись</li>
 				</ol>
 			</div>
-			<h4>Добавить новую статью</h4>
+			<h4>Добавить новую запись</h4>
 			<br/>
 
 			<?php if (isset($errors) && is_array($errors)): ?>
@@ -27,10 +27,10 @@
 				<div class="login-form">
 					<form action="#" method="post" enctype="multypart/form-date">
 
-						<p>Название</p>
+						<p>Слово или фраза</p>
 						<input type="text" name="name" placeholder="" value="<?php echo $product['name']; ?>">			
 
-						<p>Категория</p>
+						<p>Словарь</p>
 						<select name="category_id">
 
 							<?php if (is_array($categoriesList)): ?>
@@ -47,17 +47,7 @@
 						</select>
 						<br><br>
 
-
-						<p>Изображение</p>
-                        <img src="<?php echo Product::getImage($product['id']); ?>" width="200" alt="" />
-                        <input type="file" name="image" placeholder="" value="<?php echo $product['image']; ?>">
-
 						<p>Описание</p>
-                        <textarea name="description"><?php echo $product['description']; ?></textarea>
-
-						<br><br>
-
-						<p>Текст</p>
 						<textarea name="content"><?php echo $product['content']; ?></textarea>
 
 						<br><br>

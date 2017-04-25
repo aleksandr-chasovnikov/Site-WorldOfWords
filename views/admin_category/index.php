@@ -9,13 +9,13 @@
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
-                    <li class="active">Управление категориями</li>
+                    <li class="active">Управление словарями</li>
                 </ol>
             </div>
 
             <a href="/admin/category/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить категорию</a>
             
-            <h4>Список категорий</h4>
+            <h4>Список словарей</h4>
 
             <br/>
 
@@ -25,8 +25,8 @@
                     <th>Название категории</th>
                     <th>Порядковый номер</th>
                     <th>Статус</th>
-                    <th></th>
-                    <th></th>
+                    <th>Р</th>
+                    <th>У</th>
                 </tr>
                 <?php foreach ($categoriesList as $category): ?>
                     <tr>

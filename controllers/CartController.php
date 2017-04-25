@@ -70,7 +70,7 @@ class CartController
         }
 
         // Подключаем вид
-        require_once(ROOT . '/views/user/cart.php');
+        require_once(ROOT . '/views/cabinet/cart.php');
         return true;
     }
 

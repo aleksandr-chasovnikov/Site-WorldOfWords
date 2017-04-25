@@ -46,7 +46,7 @@
 						<div class="col-sm-6">
 							<div class="social-icons pull-right">
 								<ul class="nav nav-bar">
-									<li><a href="../index.php"><i class="fa fa-sign-out">На сайт</i></a></li>
+									<li><a href="/"><i class="fa fa-sign-out">На сайт</i></a></li>
 								</ul>
 							</div>
 						</div>

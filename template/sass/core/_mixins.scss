@@ -126,12 +126,12 @@
 
 // Градиент слева направо
 @mixin grad($color1, $color2) {
-	@include background-image(linear-gradient(left, $color1, $color2));
+	@include background(linear-gradient(left, $color1, $color2));
 }
 
 // Градиент сверху вниз
 @mixin gradv($color1, $color2) {
-	@include background-image(linear-gradient($color1, $color2));
+	@include background(linear-gradient($color1, $color2));
 }
 
 //Растянуть картинку на весь блок и по центру
@@ -401,7 +401,7 @@
 }
 
 // TRANSITION - переход между состояниями (анимация)
-@mixin tr($what, $time: 1s, $func: ease) {
+@mixin tr($time: 1s, $what: all, $func: ease) {
 	-moz-transition: $what $time $func;
 	-o-transition: $what $time $func;
 	-webkit-transition: $what $time $func;

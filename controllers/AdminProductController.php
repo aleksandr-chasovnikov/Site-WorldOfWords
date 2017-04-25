@@ -59,13 +59,13 @@ class AdminProductController extends AdminBase
                 $id = Product::createProduct($options);
 
                 // Если запись добавлена
-                if ($id) {
-                    // Проверим, загружалось ли через форму изображение
-                    if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-                        // Если загружалось, переместим его в нужную папке, дадим новое имя
-                        move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/{$id}.jpg");
-                    }
-                };
+                // if ($id) {
+                //     // Проверим, загружалось ли через форму изображение
+                //     if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+                //         // Если загружалось, переместим его в нужную папке, дадим новое имя
+                //         move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/{$id}.jpg");
+                //     }
+                // };
 
                 // Перенаправляем пользователя на страницу управлениями статьями
                 header("Location: /admin/product");

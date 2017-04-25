@@ -19,7 +19,7 @@ class CatalogController
         $latestProducts = Product::getLatestProducts(12);
 
         // Подключаем вид
-        require_once(ROOT . '/views/catalog/index.php');
+        require_once(ROOT . '/views/site/index.php');
         return true;
     }
 
@@ -41,7 +41,7 @@ class CatalogController
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
 
         // Подключаем вид
-        require_once(ROOT . '/views/site/category.php');
+        require_once(ROOT . '/views/site/index.php');
         return true;
     }
 

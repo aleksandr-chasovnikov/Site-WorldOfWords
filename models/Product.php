@@ -22,7 +22,7 @@ class Product
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'SELECT id, name, description FROM product '
+        $sql = 'SELECT id, name, content FROM product '
                 . 'WHERE status = "1" ORDER BY id DESC '
                 . 'LIMIT :count';
 
@@ -42,7 +42,7 @@ class Product
         while ($row = $result->fetch()) {
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
-            $productsList[$i]['description'] = $row['description'];
+            $productsList[$i]['content'] = $row['content'];
             $i++;
         }
         return $productsList;
@@ -64,7 +64,7 @@ class Product
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'SELECT id, name, description FROM product '
+        $sql = 'SELECT id, name, content FROM product '
                 . 'WHERE status = 1 AND category_id = :category_id '
                 . 'ORDER BY id ASC LIMIT :limit OFFSET :offset';
 
@@ -83,7 +83,7 @@ class Product
         while ($row = $result->fetch()) {
             $products[$i]['id'] = $row['id'];
             $products[$i]['name'] = $row['name'];
-            $products[$i]['description'] = $row['description'];
+            $products[$i]['content'] = $row['content'];
             $i++;
         }
         return $products;
@@ -169,7 +169,6 @@ class Product
         $products = array();
         while ($row = $result->fetch()) {
             $products[$i]['id'] = $row['id'];
-            $products[$i]['description'] = $row['description'];
             $products[$i]['content'] = $row['content'];
             $products[$i]['name'] = $row['name'];
             $i++;
@@ -187,13 +186,13 @@ class Product
         $db = Db::getConnection();
 
         // Получение и возврат результатов
-        $result = $db->query('SELECT id, name, description FROM product ORDER BY id ASC');
+        $result = $db->query('SELECT id, name, content FROM product ORDER BY id ASC');
         $productsList = array();
         $i = 0;
         while ($row = $result->fetch()) {
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
-            $productsList[$i]['description'] = $row['description'];
+            $productsList[$i]['content'] = $row['content'];
             $i++;
         }
         return $productsList;
@@ -233,9 +232,7 @@ class Product
         $sql = "UPDATE product
             SET 
                 name = :name, 
-                image = :image,
                 category_id = :category_id,  
-                description = :description, 
                 content = :content, 
                 status = :status
             WHERE id = :id";
@@ -243,9 +240,7 @@ class Product
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
-        $result->bindParam(':image', $options['image'], PDO::PARAM_STR);
         $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':content', $options['content'], PDO::PARAM_STR);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         return $result->execute();
@@ -263,18 +258,16 @@ class Product
 
         // Текст запроса к БД
         $sql = 'INSERT INTO product '
-                . '(name, image, category_id,'
-                . 'description, content, status)'
+                . '(name, category_id,'
+                . 'content, status)'
                 . 'VALUES '
-                . '(:name, :image, :category_id,'
-                . ':description, :content, :status)';
+                . '(:name, :category_id,'
+                . ' :content, :status)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
-        $result->bindParam(':image', $options['image'], PDO::PARAM_STR);
         $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':content', $options['content'], PDO::PARAM_STR);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         return $result->execute();

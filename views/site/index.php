@@ -1,43 +1,22 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<section>
-    <div class="container">
-        <div class="row">
+<main class="content"><!-- MAIN ============= -->
+    <h2>Список словарей</h2>
+    <hr>
 
-            <div class="col-sm-4 col-sm-offset-4 padding-right">
+    <?php foreach ($categories as $categoryItem): ?>
 
-                <?php if ($result): ?>
-                    <p>Сообщение отправлено! Мы ответим Вам на указанный email.</p>
-                <?php else: ?>
-                    <?php if (isset($errors) && is_array($errors)): ?>
-                        <ul>
-                            <?php foreach ($errors as $error): ?>
-                                <li> - <?php echo $error; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
+      <ul class="artile__item">
+        <li class="item">
+          <a href="/category/<?php echo $categoryItem['id']; ?>"
+           class="item item__link <?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>">
+           <?php echo $categoryItem['name']; ?>
+         </a>
+       </li>
+     </ul>
 
-                    <div class="signup-form"><!--sign up form-->
-                        <h2>Обратная связь</h2>
-                        <h5>Есть вопрос? Напишите нам</h5>
-                        <br/>
-                        <form action="#" method="post">
-                            <p>Ваша почта</p>
-                            <input type="email" name="userEmail" placeholder="E-mail" value="<?php echo $userEmail; ?>"/>
-                            <p>Сообщение</p>
-                            <input type="text" name="userText" placeholder="Сообщение" value="<?php echo $userText; ?>"/>
-                            <br/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Отправить" />
-                        </form>
-                    </div><!--/sign up form-->
-                <?php endif; ?>
+   <?php endforeach; ?>
 
-
-                <br/>
-                <br/>
-            </div>
-        </div>
-    </div>
-</section>
+</main>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
